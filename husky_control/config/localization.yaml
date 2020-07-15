@@ -6,7 +6,7 @@ two_d_mode: true
 
 frequency: 50
 
-odom0: husky_velocity_controller/odom
+odom0: scooby_velocity_controller/odom
 odom0_config: [false, false, false,
                false, false, false,
                true, true, true,
