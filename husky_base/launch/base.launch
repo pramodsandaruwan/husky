@@ -48,7 +48,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
     <!--Teleop -->
     <include file="$(find husky_control)/launch/teleop.launch" />
-
+    <include file="$(find i2cpwm_board)/launch/i2cpwm_node.launch"/>
     <node pkg="husky_base" name="odometry_publisher" type="odometry_publisher.py" output="screen" >
     </node>
 
