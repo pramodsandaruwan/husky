@@ -12,7 +12,7 @@ from sensor_msgs.msg import JointState
 #from sensor_msgs.msg import Imu
 from sensor_msgs.msg import Joy
 import time
-import RPi.GPIO as GPIO
+import Jetson.GPIO as GPIO
 import math
 
 class ServoConvert():
