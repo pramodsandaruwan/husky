@@ -10,21 +10,30 @@ odom0: scooby_velocity_controller/odom
 odom0_config: [false, false, false,
                false, false, false,
                true, true, true,
-               false, false, true,
+               false, false, false,
                false, false, false]
 odom0_differential: false
 odom0_queue_size: 10
 
-odom1: odometry/gps
-odom1_config: [true, false, false,
-               false, false, false,
+#odom1: odometry/gps
+#odom1_config: [true, false, false,
+#               false, false, false,
+#               false, false, false,
+#               false, false, false,
+#               false, false, false]
+#odom1_differential: false
+#odom1_queue_size: 10
+
+odom1: zed/zed_nodelet/odom
+odom1_config: [true, true, true,
+               true, true, true,
                false, false, false,
                false, false, false,
                false, false, false]
-odom1_differential: false
+odom1_differential: true
 odom1_queue_size: 10
 
-imu0: rtimulib_node/imu
+imu0: zed/zed_nodelet/imu/data
 imu0_config: [false, false, false,
               true, true, true,
               false, false, false,
@@ -32,4 +41,4 @@ imu0_config: [false, false, false,
               false, false, false]
 imu0_differential: true
 imu0_queue_size: 10
-imu0_remove_gravitational_acceleration: true
+mu0_remove_gravitational_acceleration: true
