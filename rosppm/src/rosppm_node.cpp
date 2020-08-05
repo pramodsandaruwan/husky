@@ -5,9 +5,7 @@
 #include "sensor_msgs/Joy.h"
 #include "std_msgs/Float32.h"
 #include "rosppm/ppm_io.h"
-#include "std_msgs/MultiArrayLayout.h"
-#include "std_msgs/MultiArrayDimension.h"
-#define loopRate 100
+#define loopRate 20
 
 float joy_set_axes[9];
 float read_axes[10];
@@ -37,6 +35,11 @@ void read_ppm_Callback(const rosppm::ppm_io msg){
 	read_axes[1] = map(msg.b,1000,2000,-1,1);
 	read_axes[2] = map(msg.c,1000,2000,-1,1);
 	read_axes[3] = map(msg.d,1100,1900,-1,1);
+	
+	for(int i=1;i<4;i++){
+	  if(0.1 > abs(read_axes[i]))
+		read_axes[i] = 0;
+	}
 
 	if(msg.e > 1600) read_axes[4] = 1;
 	else read_axes[4] = 0;
