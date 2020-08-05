@@ -45,9 +45,10 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
     <!-- Differential controller parameters and basic localization -->
     <include file="$(find husky_control)/launch/control.launch" />
-    <include file="$(find video_stream_opencv)/launch/camera.launch" />
+    <!--include file="$(find video_stream_opencv)/launch/camera.launch" /-->
     <!--Teleop -->
-    <!--include file="$(find husky_control)/launch/teleop.launch" /-->
+    <include file="$(find husky_control)/launch/teleop.launch" />
+    
     <include file="$(find i2cpwm_board)/launch/i2cpwm_node.launch"/>
     <node pkg="husky_base" name="odometry_publisher" type="odometry_publisher.py" output="screen" >
     </node>
