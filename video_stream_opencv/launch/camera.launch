@@ -2,7 +2,7 @@
 <launch>
   	<arg name="camera_name" default="camera" />
   	<!-- video_stream_provider can be a number as a video device or a url of a video stream -->
-  	<arg name="video_stream_provider" default="2" />
+  	<arg name="video_stream_provider" default="1" />
   	<!-- set camera fps to -->
   	<arg name="set_camera_fps" default="30" />
   	<!-- set buffer queue size of frame capturing to -->
